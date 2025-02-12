@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
+use App\Services\Impl\TodolistServiceImpl;
 use App\Services\TodolistService;
 use Illuminate\Support\ServiceProvider;
-use TodolistServiceImpl;
 
 class TodolistServiceProvider extends ServiceProvider
 {
