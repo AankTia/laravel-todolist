@@ -2,31 +2,33 @@
 
 namespace Tests\Feature;
 
+use Database\Seeders\TodoSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\DB;
 use Tests\TestCase;
 
 class TodolistControllerTest extends TestCase
 {
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        DB::delete("delete from todos");
+    }
+
     public function testTodolist()
     {
+        $this->seed(TodoSeeder::class);
+
         $this->withSession([
             "user" => "tiawidi",
-            "todolist" => [
-                [
-                    "id" => "1",
-                    "todo" => "Todo1"
-                ],
-                [
-                    "id" => "2",
-                    "todo" => "Todo2"
-                ],
-            ]
         ])->get('/todolist')
             ->assertSeeText("1")
-            ->assertSeeText("Todo1")
+            ->assertSeeText("Todo-1")
             ->assertSeeText("2")
-            ->assertSeeText("Todo2");
+            ->assertSeeText("Todo-2");
     }
 
     public function testAddTodoFailed()
@@ -42,7 +44,7 @@ class TodolistControllerTest extends TestCase
         $this->withSession([
             "user" => "tiawidi"
         ])->post("/todolist", [
-            "todo" => "Todo1"
+            "todo" => "Todo-1"
         ])->assertRedirect("/todolist");
     }
 
@@ -53,11 +55,11 @@ class TodolistControllerTest extends TestCase
             "todolist" => [
                 [
                     "id" => "1",
-                    "todo" => "Todo1"
+                    "todo" => "Todo-1"
                 ],
                 [
                     "id" => "2",
-                    "todo" => "Todo2"
+                    "todo" => "Todo-2"
                 ],
             ]
         ])->post("/todolist/1/delete")
