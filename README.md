@@ -67,5 +67,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 ## Notes
 
--   **[Membuat Web Login & Todolist dengan Laravel](https://youtu.be/mlY5SVQd-xE?si=N1PNzlR5aIFJWRnW)**
--   **[laravel-dasar-todolist](https://github.com/ProgrammerZamanNow/laravel-dasar-todolist)**
+### Membuat Web Login & Todolist dengan Laravel
+
+-   **[Youtube](https://youtu.be/mlY5SVQd-xE?si=N1PNzlR5aIFJWRnW)**
+-   **[Slide](https://docs.google.com/presentation/d/1WAbbS2EUvXUIqLFbPHV3zyvRe6CueDk0uGrFz6Pvse0/edit#slide=id.p)**
+-   **[Source Code](https://github.com/ProgrammerZamanNow/laravel-dasar-todolist)**
+
+### Membuat Web Todolist dengan Laravel dan MySQL
+
+-   **[Youtube](https://youtu.be/r4yqOYStUHU?si=DcS5dp9Zgu6pGdPE)**
+-   **[Slide](https://docs.google.com/presentation/d/19IJJW6ZIpj7-k9tYhpnmSO8OQpp1Zq-QnMz0sA1Ldfo/edit#slide=id.p)**
+-   **[Source Code](https://github.com/ProgrammerZamanNow/belajar-laravel-web-todolist)**
