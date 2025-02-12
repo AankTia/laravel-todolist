@@ -23,7 +23,7 @@
         @endif
 
         <div class="row">
-            <form method="post" action="/logout">
+            <form method="post" action="http://localhost/laravel-todolist/public/logout">
                 @csrf
                 <button class="w-15 btn btn-lg btn-danger" type="submit">Sign Out</button>
             </form>
@@ -36,7 +36,8 @@
                         Now</a></p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
-                <form class="p-4 p-md-5 border rounded-3 bg-light" method="post" action="/todolist">
+                <form class="p-4 p-md-5 border rounded-3 bg-light" method="post" action="http://localhost/laravel-todolist/public/todolist">
+                    @csrf
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" name="todo" placeholder="todo">
                         <label for="todo">Todo</label>
